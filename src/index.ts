@@ -1,3 +1,4 @@
-import { start } from "./client/client";
+import {ExtendedClient} from "./client/Client"
 
-start(__dirname);
+export const client = new ExtendedClient();
+client.start(__dirname);
