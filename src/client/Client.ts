@@ -8,14 +8,12 @@ import {
 
 import dotenv from 'dotenv'
 
-import { Event } from "./Event";
-
-
-import { CommandType } from "../type/CommandType";
-
 import glob from "glob";
+
 import { promisify } from "util";
 
+import { Event } from "./Event";
+import { CommandType } from "../type/CommandType";
 import { RegisterCommandsOptions } from "../interfaces/RegisterCommandsOptions";
 
 dotenv.config();
@@ -70,7 +68,7 @@ export class ExtendedClient extends Client
         });
 
         this.on("ready", () => {
-            this.user?.setActivity({name: 'den Usern auf die Finger', type: ActivityType.Watching, url: 'https://github.com/Benexdrake/DiscordTS'})
+            // this.user?.setActivity({name: 'den Usern auf die Finger', type: ActivityType.Watching, url: 'https://github.com/Benexdrake/DiscordTS'})
 
             for(const guild of this.guilds.cache)
             {   
